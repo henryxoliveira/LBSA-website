@@ -1,0 +1,41 @@
+/* Additional styles for About page if needed */
+.aboutHero {
+  background: linear-gradient(135deg, var(--cardinal) 0%, #8B0000 100%);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-8);
+}
+
+.valueCard {
+  background: var(--white);
+  padding: var(--space-8);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--cardinal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  color: var(--white);
+}
+
+.valueIcon svg {
+  width: 32px;
+  height: 32px;
+}

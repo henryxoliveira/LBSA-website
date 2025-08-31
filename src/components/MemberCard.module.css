@@ -1,0 +1,73 @@
+.memberCard {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.memberCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--cardinal);
+}
+
+.memberImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.memberCard:hover .image {
+  transform: scale(1.05);
+}
+
+.memberInfo {
+  padding: var(--space-6);
+  position: relative;
+}
+
+.memberName {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin: 0 0 var(--space-2);
+}
+
+.memberRole {
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-4);
+}
+
+.linkedinLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  border-radius: 50%;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.linkedinLink:hover {
+  background-color: var(--cardinal);
+  color: var(--white);
+  transform: translateY(-2px);
+}
