@@ -5,38 +5,44 @@ const Board = () => {
   const boardMembers = [
     {
       name: 'Maria Rodriguez',
-      role: 'President',
+      role: 'Co-President',
       image: '/src/assets/img/headshot_1.svg',
       linkedin: 'https://linkedin.com/in/maria-rodriguez'
     },
     {
+      name: 'Jacky Ceja',
+      role: 'Co-President',
+      image: '/src/assets/img/headshot_2.svg',
+      linkedin: 'https://linkedin.com/in/jacky-ceja'
+    },
+    {
       name: 'Carlos Martinez',
       role: 'Vice President',
-      image: '/src/assets/img/headshot_2.svg',
+      image: '/src/assets/img/headshot_3.svg',
       linkedin: 'https://linkedin.com/in/carlos-martinez'
     },
     {
       name: 'Ana Garcia',
       role: 'Treasurer',
-      image: '/src/assets/img/headshot_3.svg',
+      image: '/src/assets/img/headshot_4.svg',
       linkedin: 'https://linkedin.com/in/ana-garcia'
     },
     {
       name: 'Diego Lopez',
       role: 'Secretary',
-      image: '/src/assets/img/headshot_4.svg',
+      image: '/src/assets/img/headshot_5.svg',
       linkedin: 'https://linkedin.com/in/diego-lopez'
     },
     {
       name: 'Sofia Hernandez',
       role: 'Events Coordinator',
-      image: '/src/assets/img/headshot_5.svg',
+      image: '/src/assets/img/headshot_6.svg',
       linkedin: 'https://linkedin.com/in/sofia-hernandez'
     },
     {
       name: 'Javier Torres',
       role: 'Marketing Director',
-      image: '/src/assets/img/headshot_6.svg',
+      image: '/src/assets/img/headshot_7.svg',
       linkedin: 'https://linkedin.com/in/javier-torres'
     }
   ]
