@@ -1,49 +1,98 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import MemberCard from '../components/MemberCard'
 
 const Board = () => {
   const boardMembers = [
     {
-      name: 'Maria Rodriguez',
+      name: 'Adrian Pina',
       role: 'Co-President',
-      image: '/src/assets/img/headshot_1.svg',
-      linkedin: 'https://linkedin.com/in/maria-rodriguez'
+      image: '/src/assets/img/headshot_1.jpg',
+      linkedin: 'https://www.linkedin.com/in/adrian-pina2022/'
     },
     {
       name: 'Jacky Ceja',
       role: 'Co-President',
-      image: '/src/assets/img/headshot_2.svg',
-      linkedin: 'https://linkedin.com/in/jacky-ceja'
+      image: '/src/assets/img/headshot_2.jpg',
+      linkedin: 'https://www.linkedin.com/in/jacqueline-ceja/'
     },
     {
-      name: 'Carlos Martinez',
-      role: 'Vice President',
-      image: '/src/assets/img/headshot_3.svg',
-      linkedin: 'https://linkedin.com/in/carlos-martinez'
+      name: 'Karla Hernandez',
+      role: 'Director of Marketing',
+      image: '/src/assets/img/headshot_3.jpg',
+      linkedin: 'https://www.linkedin.com/in/karla-martinez-karla-martinez/'
     },
     {
-      name: 'Ana Garcia',
-      role: 'Treasurer',
-      image: '/src/assets/img/headshot_4.svg',
-      linkedin: 'https://linkedin.com/in/ana-garcia'
+      name: 'Gavin Hall',
+      role: 'Director of Member Relations',
+      image: '/src/assets/img/headshot_4.jpg',
+      linkedin: 'https://www.linkedin.com/in/gavin-hall/'
     },
     {
-      name: 'Diego Lopez',
-      role: 'Secretary',
-      image: '/src/assets/img/headshot_5.svg',
-      linkedin: 'https://linkedin.com/in/diego-lopez'
+      name: 'Jahir De Los Santos',
+      role: 'Director of Internal Affairs',
+      image: '/src/assets/img/headshot_5.jpg',
+      linkedin: 'https://www.linkedin.com/in/jahirdelossantos/'
     },
     {
-      name: 'Sofia Hernandez',
-      role: 'Events Coordinator',
-      image: '/src/assets/img/headshot_6.svg',
-      linkedin: 'https://linkedin.com/in/sofia-hernandez'
+      name: 'Juan Macias',
+      role: 'Finance Coordinator',
+      image: '/src/assets/img/headshot_6.jpg',
+      linkedin: 'https://www.linkedin.com/in/juan-mac%C3%ADas-02599b240/'
     },
     {
-      name: 'Javier Torres',
-      role: 'Marketing Director',
-      image: '/src/assets/img/headshot_7.svg',
-      linkedin: 'https://linkedin.com/in/javier-torres'
+      name: 'Jeffrey Leon',
+      role: 'Internal Relations',
+      image: '/src/assets/img/headshot_7.jpg',
+      linkedin: 'https://www.linkedin.com/in/jeffrey-leon-249819219/'
+    },
+    {
+      name: 'Jasmin Gonzalez-Ortiz',
+      role: 'Creative Media Manager',
+      image: '/src/assets/img/headshot_8.jpg',
+      linkedin: 'https://www.linkedin.com/in/jasmingonzalez-ortiz/'
+    },
+    {
+      name: 'Daniel Barandica',
+      role: 'Internal Relations',
+      image: '/src/assets/img/headshot_9.jpg',
+      linkedin: 'https://www.linkedin.com/in/daniel-barandica-/'
+    },
+    {
+      name: 'Emily Robles',
+      role: 'Marketing Coordinator',
+      image: '/src/assets/img/headshot_10.jpg',
+      linkedin: 'https://www.linkedin.com/in/emily-robles-9669602a9/'
+    },
+    {
+      name: 'Jesus Cruz',
+      role: 'Financial Advisor',
+      image: '/src/assets/img/headshot_11.jpg',
+      linkedin: 'https://www.linkedin.com/in/jesus-cruz72/'
+    },
+    {
+      name: 'Jasmine Arizpe',
+      role: 'Marketing Coordinator',
+      image: '/src/assets/img/headshot_12.jpg',
+      linkedin: 'https://www.linkedin.com/in/jasmine-arizpe-a24789342/'
+    },
+    {
+      name: 'Camilo Ramirez',
+      role: 'Director of AR & Alumni Engagement Coordinator',
+      image: '/src/assets/img/headshot_13.jpg',
+      linkedin: 'https://www.linkedin.com/in/camilo-ramirez-/'
+    },
+    {
+      name: 'Stephanie Andrade',
+      role: 'Sponsorship Outreach',
+      image: '/src/assets/img/headshot_14.jpg',
+      linkedin: 'https://www.linkedin.com/in/stephanie-andrade-chavez/'
+    },
+    {
+      name: 'Henrique Olivera',
+      role: 'VP of External Affairs',
+      image: '/src/assets/img/headshot_15.jpg',
+      linkedin: 'https://www.linkedin.com/in/henrique-de-mello-oliveira/'
     }
   ]
 
@@ -64,7 +113,7 @@ const Board = () => {
       <section className="py-16">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">2024-2025 Leadership Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">2025-2026 Leadership Team</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our executive board works tirelessly to create meaningful experiences 
               and opportunities for all LBSA members.
@@ -89,7 +138,7 @@ const Board = () => {
       <section className="py-16 bg-gray-100">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Committee Chairs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Board Highlights</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our committee chairs lead specialized initiatives and programs 
               that support our four pillars.
@@ -157,17 +206,31 @@ const Board = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:lbsa@scu.edu"
+              href="/contact"
               className="bg-cardinal text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition inline-block"
             >
               Contact Us
             </a>
-            <a
-              href="/membership"
+            <Link
+              to="/membership"
+              onClick={() => {
+                setTimeout(() => {
+                  const element = document.getElementById('how-to-join')
+                  if (element) {
+                    const elementRect = element.getBoundingClientRect()
+                    const absoluteElementTop = elementRect.top + window.pageYOffset
+                    const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2)
+                    window.scrollTo({
+                      top: middle,
+                      behavior: 'smooth'
+                    })
+                  }
+                }, 100)
+              }}
               className="border-2 border-cardinal text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-cardinal hover:text-white transition inline-block"
             >
               Join LBSA
-            </a>
+            </Link>
           </div>
         </div>
       </section>

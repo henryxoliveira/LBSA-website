@@ -163,7 +163,7 @@ const Membership = () => {
       </section>
 
       {/* How to Join Section */}
-      <section className="py-16 bg-gray-100">
+      <section id="how-to-join" className="py-16 bg-gray-100">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How to Join</h2>

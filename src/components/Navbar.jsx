@@ -10,7 +10,24 @@ const Navbar = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false)
-  }, [location.pathname])
+    // Scroll to top when route changes
+    window.scrollTo(0, 0)
+    
+    // Handle hash links for smooth scrolling
+    const handleHashScroll = () => {
+      const hash = window.location.hash
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      }
+    }
+    
+    handleHashScroll()
+  }, [location.pathname, location.hash])
 
 
   // Handle escape key
