@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--charcoal);
+  background-color: var(--black);
   color: var(--white);
   padding: var(--space-12) 0 var(--space-6);
   margin-top: auto;
@@ -34,8 +34,9 @@
 .footerTitle {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--cardinal);
+  color: var(--burgundy);
   margin: 0;
+  font-family: var(--font-heading);
 }
 
 .footerSubtitle {
@@ -43,12 +44,14 @@
   font-weight: 600;
   margin: 0 0 var(--space-3);
   color: var(--white);
+  font-family: var(--font-subheading);
 }
 
 .footerDescription {
   color: var(--gray-300);
   margin: 0;
   line-height: 1.6;
+  font-family: var(--font-body);
 }
 
 .footerLinks {
@@ -65,10 +68,11 @@
   text-decoration: none;
   transition: var(--transition);
   padding: var(--space-1) 0;
+  font-family: var(--font-body);
 }
 
 .footerLinks a:hover {
-  color: var(--white);
+  color: var(--burgundy);
   padding-left: var(--space-2);
 }
 
@@ -84,7 +88,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: var(--gray-700);
+  background-color: var(--burgundy);
   color: var(--white);
   border-radius: 50%;
   transition: var(--transition);
@@ -92,7 +96,8 @@
 }
 
 .socialLink:hover {
-  background-color: var(--cardinal);
+  background-color: var(--beige);
+  color: var(--burgundy);
   transform: translateY(-2px);
 }
 
@@ -100,6 +105,7 @@
   color: var(--gray-300);
   font-size: var(--font-size-sm);
   line-height: 1.6;
+  font-family: var(--font-body);
 }
 
 .contactInfo p {
@@ -128,6 +134,7 @@
   color: var(--gray-400);
   margin: 0;
   font-size: var(--font-size-sm);
+  font-family: var(--font-body);
 }
 
 .footerBottomLinks {
@@ -141,10 +148,11 @@
   text-decoration: none;
   font-size: var(--font-size-sm);
   transition: var(--transition);
+  font-family: var(--font-body);
 }
 
 .footerBottomLinks a:hover {
-  color: var(--white);
+  color: var(--burgundy);
 }
 
 .separator {

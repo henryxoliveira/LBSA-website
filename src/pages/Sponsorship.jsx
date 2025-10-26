@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Sponsorship = () => {
+  const sponsors = [
+    { name: 'PwC', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Deloitte', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Target', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Google', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Microsoft', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Amazon', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Salesforce', logo: '/src/assets/img/logo_scu.svg' },
+    { name: 'Netflix', logo: '/src/assets/img/logo_scu.svg' }
+  ]
   const sponsorshipTiers = [
     {
       name: 'Bronze',
@@ -52,78 +62,86 @@ const Sponsorship = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-cardinal text-white py-20">
+      <section className="bg-burgundy text-white py-20">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Sponsorship Opportunities</h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Partner with SCU LBSA to support the next generation of Latinx business leaders 
-            and connect with talented students.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{fontFamily: 'var(--font-heading)'}}>
+            Our Corporate Partners
+          </h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto" style={{fontFamily: 'var(--font-body)'}}>
+            We are proud to collaborate with industry leaders who share our mission of empowering Latinx students in business.
           </p>
         </div>
       </section>
 
-      {/* Why Sponsor Section */}
-      <section className="py-16">
+      {/* Sponsors Grid Section */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="grid md:grid-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner With Us?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-cardinal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 13l4 4L19 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Access to Top Talent</h3>
-                    <p className="text-gray-600">Connect with high-achieving Latinx business students from Santa Clara University.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-cardinal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 13l4 4L19 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Diversity & Inclusion</h3>
-                    <p className="text-gray-600">Support diversity initiatives and demonstrate your commitment to inclusive hiring.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-cardinal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 13l4 4L19 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Brand Visibility</h3>
-                    <p className="text-gray-600">Increase your brand awareness among students, alumni, and the broader community.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-cardinal rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 13l4 4L19 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Community Impact</h3>
-                    <p className="text-gray-600">Make a meaningful difference in the lives of students and the Latinx community.</p>
-                  </div>
-                </div>
+          <div className="grid grid-2 md:grid-4 lg:grid-4 gap-8 items-center">
+            {sponsors.map((sponsor, index) => (
+              <div key={index} className="flex items-center justify-center p-8 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="max-h-16 w-auto"
+                />
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Sponsor Section */}
+      <section className="py-20 bg-light-beige">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4" style={{fontFamily: 'var(--font-heading)'}}>
+              Why Partner With Us?
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{fontFamily: 'var(--font-body)'}}>
+              Partner with SCU LBSA to support the next generation of Latinx business leaders and connect with talented students.
+            </p>
+          </div>
+          <div className="grid grid-2 md:grid-4 gap-8">
             <div className="text-center">
-              <img
-                src="/src/assets/img/sponsorship_hero.jpg"
-                alt="Corporate networking event"
-                className="rounded-lg shadow-lg max-w-md mx-auto"
-              />
+              <div className="w-16 h-16 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="9" cy="7" r="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Access to Top Talent</h3>
+              <p className="text-gray-600" style={{fontFamily: 'var(--font-body)'}}>Connect with high-achieving Latinx business students from Santa Clara University.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Diversity & Inclusion</h3>
+              <p className="text-gray-600" style={{fontFamily: 'var(--font-body)'}}>Support diversity initiatives and demonstrate your commitment to inclusive hiring.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Brand Visibility</h3>
+              <p className="text-gray-600" style={{fontFamily: 'var(--font-body)'}}>Increase your brand awareness among students, alumni, and the broader community.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Community Impact</h3>
+              <p className="text-gray-600" style={{fontFamily: 'var(--font-body)'}}>Make a meaningful difference in the lives of students and the Latinx community.</p>
             </div>
           </div>
         </div>
@@ -205,23 +223,27 @@ const Sponsorship = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-cardinal text-white">
+      <section className="py-20 bg-burgundy text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Partner With Us?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-200">
+          <h2 className="text-4xl font-bold mb-6" style={{fontFamily: 'var(--font-heading)'}}>
+            Ready to Partner With Us?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-200" style={{fontFamily: 'var(--font-body)'}}>
             Join us in empowering the next generation of Latinx business leaders. 
             Contact us to discuss sponsorship opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:lbsa@scu.edu?subject=Sponsorship%20Inquiry"
-              className="bg-white text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+              className="bg-white text-burgundy px-8 py-3 rounded-lg font-semibold hover:bg-beige transition inline-block"
+              style={{fontFamily: 'var(--font-subheading)'}}
             >
               Email Us
             </a>
             <a
               href="tel:+1-408-554-4000"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cardinal transition inline-block"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-burgundy transition inline-block"
+              style={{fontFamily: 'var(--font-subheading)'}}
             >
               Call Us
             </a>

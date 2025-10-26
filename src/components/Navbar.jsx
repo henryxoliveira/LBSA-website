@@ -56,10 +56,7 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/board', label: 'Board' },
-    { path: '/sponsorship', label: 'Sponsorship' },
-    { path: '/alumni', label: 'Alumni' },
-    { path: '/membership', label: 'Membership' },
-    { path: '/resources', label: 'Resources' },
+    { path: '/sponsorship', label: 'Sponsors' },
     { path: '/contact', label: 'Contact' }
   ]
 
@@ -69,7 +66,7 @@ const Navbar = () => {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoText}>SCU LBSA</span>
+            <span className={styles.logoText}>LBSA</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,194 +1,175 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import StatCard from '../components/StatCard'
-import PillarCard from '../components/PillarCard'
-import LogoGrid from '../components/LogoGrid'
-import { setupCounters } from '../utils/counters'
 
 const Home = () => {
-  useEffect(() => {
-    // Setup counter animations
-    const observer = setupCounters()
-    return () => observer?.disconnect()
-  }, [])
-
-  const stats = [
-    { number: '150+', label: 'Members', description: 'Active student members' },
-    { number: '300+', label: 'Alumni', description: 'Graduated members' },
-    { number: '15+', label: 'Sponsors', description: 'Corporate partners' },
-    { number: '25+', label: 'Events/Year', description: 'Professional & social events' },
-    { number: '$10k+', label: 'Scholarships', description: 'Awarded annually' }
-  ]
-
-  const pillars = [
+  const events = [
     {
-      title: 'Familia',
-      description: 'Building lasting relationships and creating a supportive community where every member feels valued and connected.',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="9" cy="7" r="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
+      date: 'OCTOBER 18',
+      title: 'PwC Panel & Network Night',
+      description: 'Join us for an evening of networking and professional insights from PwC representatives.',
+      image: '/src/assets/img/hero.jpg'
     },
     {
-      title: 'Community Service',
-      description: 'Giving back to our community through volunteer work, mentorship programs, and charitable initiatives.',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
+      date: 'NOV. 3',
+      title: 'Building Career Workshop: Building Your Brand',
+      description: 'Learn how to build and maintain your professional brand in today\'s competitive market.',
+      image: '/src/assets/img/hero.jpg'
     },
     {
-      title: 'Professional Development',
-      description: 'Providing opportunities for career growth through workshops, networking events, and industry connections.',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M6 12v5c3 3 9 3 12 0v-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Academics',
-      description: 'Supporting academic excellence through study groups, tutoring programs, and educational resources.',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
+      date: 'SEPT. 15',
+      title: 'Latinx Heritage Month Celebration',
+      description: 'Celebrate Latinx Heritage Month with cultural events, food, and community building.',
+      image: '/src/assets/img/hero.jpg'
     }
-  ]
-
-  const logos = [
-    { src: '/src/assets/img/logo_placeholder_1.svg', alt: 'Company 1' },
-    { src: '/src/assets/img/logo_placeholder_2.svg', alt: 'Company 2' },
-    { src: '/src/assets/img/logo_placeholder_3.svg', alt: 'Company 3' },
-    { src: '/src/assets/img/logo_placeholder_4.svg', alt: 'Company 4' },
-    { src: '/src/assets/img/logo_placeholder_5.svg', alt: 'Company 5' },
-    { src: '/src/assets/img/logo_placeholder_6.svg', alt: 'Company 6' },
-    { src: '/src/assets/img/logo_placeholder_7.svg', alt: 'Company 7' },
-    { src: '/src/assets/img/logo_placeholder_8.svg', alt: 'Company 8' },
-    { src: '/src/assets/img/logo_placeholder_9.svg', alt: 'Company 9' },
-    { src: '/src/assets/img/logo_placeholder_10.svg', alt: 'Company 10' },
-    { src: '/src/assets/img/logo_placeholder_11.svg', alt: 'Company 11' },
-    { src: '/src/assets/img/logo_placeholder_12.svg', alt: 'Company 12' }
   ]
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-cardinal text-white py-20">
+      {/* Hero Banner */}
+      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center" style={{backgroundImage: 'url(/src/assets/img/hero.jpg)'}}>
+        <div className="absolute inset-0 bg-burgundy opacity-80"></div>
+        <div className="relative z-10 text-center text-white">
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-8xl font-bold mb-4" style={{fontFamily: 'var(--font-heading)'}}>
+              Connect. Lead. Empower.
+            </h1>
+          </div>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{fontFamily: 'var(--font-body)'}}>
+            The Latinx Business Student Association at Santa Clara University builds a community for Latinx students to grow professionally and personally in the business world.
+          </p>
+          <Link
+            to="/about"
+            className="bg-white text-burgundy px-8 py-4 rounded-lg font-semibold hover:bg-beige transition inline-block text-lg"
+            style={{fontFamily: 'var(--font-subheading)'}}
+          >
+            Learn More About Us
+          </Link>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="grid md:grid-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Your Familia in Business at Santa Clara University
-              </h1>
-              <p className="text-xl mb-8 text-gray-200">
-                Empowering Latinx business students through professional development, 
-                community service, and academic excellence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/membership"
-                  className="bg-white text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block text-center"
-                >
-                  Join the Familia
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cardinal transition inline-block text-center"
-                >
-                  Learn More
-                </Link>
+            <div className="relative">
+              <img
+                src="/src/assets/img/hero.jpg"
+                alt="LBSA students networking"
+                className="rounded-lg shadow-lg w-full"
+              />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="text-4xl font-bold" style={{fontFamily: 'var(--font-heading)'}}>BSA</div>
+                <div className="text-lg" style={{fontFamily: 'var(--font-subheading)'}}>SCU</div>
               </div>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold mb-6" style={{fontFamily: 'var(--font-heading)'}}>
+                About LBSA at SCU
+              </h2>
+              <p className="text-lg mb-8" style={{fontFamily: 'var(--font-body)'}}>
+                Founded to create inclusive spaces within the Leavey School of Business, LBSA fosters professional development, cultural pride, and leadership opportunities for Latinx students. We connect students with industry professionals, alumni, and peers who share a passion for business and community impact.
+              </p>
+              <div className="grid grid-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">💼</div>
+                  <h3 className="font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Professional Growth</h3>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🌎</div>
+                  <h3 className="font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Cultural Identity</h3>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🤝</div>
+                  <h3 className="font-semibold mb-2" style={{fontFamily: 'var(--font-subheading)'}}>Community Leadership</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Board Section */}
+      <section className="py-20 bg-light-beige">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4" style={{fontFamily: 'var(--font-heading)'}}>
+              Meet Our 2025 Board
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{fontFamily: 'var(--font-body)'}}>
+              A team of dedicated students committed to empowering the next generation of Latinx leaders.
+            </p>
+          </div>
+          <div className="grid grid-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <img
+                src="/src/assets/img/headshot_1.svg"
+                alt="Sophia Martinez"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="font-bold text-lg mb-1" style={{fontFamily: 'var(--font-subheading)'}}>Sophia Martinez</h3>
+              <p className="text-gray-600 italic" style={{fontFamily: 'var(--font-body)'}}>President</p>
             </div>
             <div className="text-center">
               <img
-                src="/src/assets/img/hero.jpg"
-                alt="SCU LBSA students at a networking event"
-                className="rounded-lg shadow-lg max-w-md mx-auto"
+                src="/src/assets/img/headshot_1.svg"
+                alt="Carlos Rodriguez"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
+              <h3 className="font-bold text-lg mb-1" style={{fontFamily: 'var(--font-subheading)'}}>Carlos Rodriguez</h3>
+              <p className="text-gray-600 italic" style={{fontFamily: 'var(--font-body)'}}>Vice President</p>
+            </div>
+            <div className="text-center">
+              <img
+                src="/src/assets/img/headshot_1.svg"
+                alt="Isabella Gomez"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="font-bold text-lg mb-1" style={{fontFamily: 'var(--font-subheading)'}}>Isabella Gomez</h3>
+              <p className="text-gray-600 italic" style={{fontFamily: 'var(--font-body)'}}>Treasurer</p>
+            </div>
+            <div className="text-center">
+              <img
+                src="/src/assets/img/headshot_1.svg"
+                alt="Juan Lopez"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="font-bold text-lg mb-1" style={{fontFamily: 'var(--font-subheading)'}}>Juan Lopez</h3>
+              <p className="text-gray-600 italic" style={{fontFamily: 'var(--font-body)'}}>Secretary</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Impact Stats Section */}
-      <section className="py-16 bg-gray-100">
+      {/* Events Section */}
+      <section className="py-20 bg-burgundy text-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Building a strong community of Latinx business leaders at Santa Clara University
-            </p>
+            <h2 className="text-4xl font-bold mb-4" style={{fontFamily: 'var(--font-heading)'}}>
+              Events
+            </h2>
           </div>
-          
-          <div className="grid grid-3 md:grid-5 gap-6">
-            {stats.map((stat, index) => (
-              <StatCard
-                key={index}
-                number={stat.number}
-                label={stat.label}
-                description={stat.description}
-              />
+          <div className="grid md:grid-3 gap-8">
+            {events.map((event, index) => (
+              <div key={index} className="bg-white text-black rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="font-bold text-burgundy mb-2" style={{fontFamily: 'var(--font-subheading)'}}>
+                    {event.date}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3" style={{fontFamily: 'var(--font-subheading)'}}>
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-600" style={{fontFamily: 'var(--font-body)'}}>
+                    {event.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Pillars Section */}
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Four Pillars</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              The foundation of our organization and what drives everything we do
-            </p>
-          </div>
-          
-          <div className="grid grid-2 md:grid-4 gap-8">
-            {pillars.map((pillar, index) => (
-              <PillarCard
-                key={index}
-                title={pillar.title}
-                description={pillar.description}
-                icon={pillar.icon}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Where We Go Section */}
-      <LogoGrid
-        title="Where We Go"
-        subtitle="Our members and alumni work at leading companies across various industries"
-        logos={logos}
-      />
-
-      {/* Community & Belonging Section */}
-      <section className="py-16 bg-cardinal text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Community & Belonging
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Join a community where you'll find mentorship, friendship, and opportunities 
-            to grow both personally and professionally. Our familia is here to support 
-            your journey every step of the way.
-          </p>
-          <Link
-            to="/membership"
-            className="bg-white text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
-          >
-            Become a Member
-          </Link>
         </div>
       </section>
     </>

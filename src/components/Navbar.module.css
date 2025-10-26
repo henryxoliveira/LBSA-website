@@ -17,17 +17,17 @@
 .logo {
   font-size: var(--font-size-xl);
   font-weight: 700;
-  color: var(--cardinal);
+  color: var(--burgundy);
   text-decoration: none;
   transition: var(--transition);
 }
 
 .logo:hover {
-  color: var(--charcoal);
+  color: var(--black);
 }
 
 .logoText {
-  font-family: var(--font-family);
+  font-family: var(--font-heading);
 }
 
 /* Desktop Navigation */
@@ -51,9 +51,10 @@
 }
 
 .navLink {
-  color: var(--charcoal);
+  color: var(--black);
   text-decoration: none;
   font-weight: 500;
+  font-family: var(--font-subheading);
   padding: var(--space-2) var(--space-3);
   border-radius: var(--border-radius);
   transition: var(--transition);
@@ -61,13 +62,13 @@
 }
 
 .navLink:hover {
-  color: var(--cardinal);
-  background-color: var(--gray-100);
+  color: var(--burgundy);
+  background-color: var(--beige);
 }
 
 .navLink.active {
-  color: var(--cardinal);
-  background-color: var(--gray-100);
+  color: var(--burgundy);
+  background-color: var(--beige);
 }
 
 .navLink.active::after {
@@ -78,7 +79,7 @@
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background-color: var(--cardinal);
+  background-color: var(--burgundy);
   border-radius: 1px;
 }
 
@@ -126,8 +127,8 @@
 }
 
 .dropdownItem:hover {
-  background-color: var(--gray-100);
-  color: var(--cardinal);
+  background-color: var(--beige);
+  color: var(--burgundy);
 }
 
 /* Mobile Menu Button */
@@ -153,7 +154,7 @@
 .hamburger {
   width: 24px;
   height: 2px;
-  background-color: var(--charcoal);
+  background-color: var(--black);
   position: relative;
   transition: var(--transition);
 }
@@ -164,7 +165,7 @@
   position: absolute;
   width: 24px;
   height: 2px;
-  background-color: var(--charcoal);
+  background-color: var(--black);
   transition: var(--transition);
 }
 
@@ -211,22 +212,23 @@
 .mobileNavLink {
   display: block;
   padding: var(--space-3) 0;
-  color: var(--charcoal);
+  color: var(--black);
   text-decoration: none;
   font-weight: 500;
+  font-family: var(--font-subheading);
   border-bottom: 1px solid var(--gray-100);
   transition: var(--transition);
 }
 
 .mobileNavLink:hover {
-  color: var(--cardinal);
-  background-color: var(--gray-100);
+  color: var(--burgundy);
+  background-color: var(--beige);
   padding-left: var(--space-4);
 }
 
 .mobileNavLink.active {
-  color: var(--cardinal);
-  background-color: var(--gray-100);
+  color: var(--burgundy);
+  background-color: var(--beige);
   padding-left: var(--space-4);
 }
 
@@ -257,6 +259,6 @@
 }
 
 .mobileSubLink:hover {
-  color: var(--cardinal);
+  color: var(--burgundy);
   padding-left: var(--space-2);
 }
