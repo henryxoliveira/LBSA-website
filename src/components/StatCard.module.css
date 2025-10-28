@@ -14,6 +14,7 @@
 }
 
 .statNumber {
+  font-family: var(--font-heading);
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--cardinal);
@@ -28,9 +29,10 @@
 }
 
 .statLabel {
+  font-family: var(--font-subheading);
   font-size: var(--font-size-lg);
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--cardinal);
   margin: 0 0 var(--space-2);
 }
 

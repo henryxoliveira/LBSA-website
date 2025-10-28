@@ -1,3 +1,6 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* ===== GLOBAL STYLES ===== */
 html {
   scroll-behavior: smooth;
@@ -5,27 +8,27 @@ html {
 
 /* ===== CSS VARIABLES ===== */
 :root {
-  /* Colors - SCU Burgundy Inspired */
-  --burgundy: #7A1C1C;
-  --black: #000000;
-  --white: #FFFFFF;
-  --beige: #D9C7B8;
-  --light-beige: #F7F3EF;
-  --gray-100: #F3F4F6;
-  --gray-200: #E5E7EB;
-  --gray-300: #D1D5DB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-800: #1F2937;
+  /* Colors */
+  --cardinal: #8B1538;
+  --burgundy: #722F37;
+  --charcoal: #1F2937;
+  --gray-100: #F8F9FA;
+  --gray-200: #E9ECEF;
+  --gray-300: #DEE2E6;
+  --gray-400: #ADB5BD;
+  --gray-500: #6C757D;
+  --gray-600: #495057;
+  --gray-700: #343A40;
+  --gray-800: #212529;
   --gray-900: #111827;
+  --white: #FFFFFF;
+  --light-beige: #F5F5DC;
   
-  /* Typography - Canva-compatible fonts */
-  --font-heading: 'Playfair Display', serif;
-  --font-subheading: 'Montserrat', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
-  --font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Typography */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Playfair Display', 'Times New Roman', serif;
+  --font-subheading: 'Inter', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -78,10 +81,10 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: 1.6;
-  color: var(--black);
+  color: var(--charcoal);
   background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -159,7 +162,7 @@ h6 {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--burgundy);
+  background: var(--cardinal);
   color: var(--white);
   padding: 8px;
   text-decoration: none;
@@ -174,7 +177,7 @@ h6 {
 
 /* ===== FOCUS STYLES ===== */
 :focus-visible {
-  outline: 2px solid var(--burgundy);
+  outline: 2px solid var(--cardinal);
   outline-offset: 2px;
 }
 
@@ -204,23 +207,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: var(--space-4);
-  color: var(--burgundy);
+  color: var(--cardinal);
 }
 
 h1 {
   font-size: var(--font-size-4xl);
+  font-weight: 700;
 }
 
 h2 {
   font-size: var(--font-size-3xl);
+  font-weight: 600;
 }
 
 h3 {
   font-size: var(--font-size-2xl);
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--font-size-xl);
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -362,6 +369,10 @@ section {
   background-color: var(--white);
 }
 
+.bg-cardinal {
+  background-color: var(--cardinal);
+}
+
 .bg-burgundy {
   background-color: var(--burgundy);
 }
@@ -373,6 +384,10 @@ section {
 /* ===== TEXT COLOR UTILITIES ===== */
 .text-white {
   color: var(--white);
+}
+
+.text-cardinal {
+  color: var(--cardinal);
 }
 
 .text-burgundy {

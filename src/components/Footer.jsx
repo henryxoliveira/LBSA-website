@@ -11,12 +11,19 @@ const Footer = () => {
         <div className={styles.footerContent}>
           {/* Organization Info */}
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>LBSA</h3>
+            <div className="mb-4">
+              <img 
+                src="/src/assets/img/Latinx Business Student Association Logo.png" 
+                alt="LBSA Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
+            <h3 className={styles.footerTitle}>SCU LBSA</h3>
             <p className={styles.footerDescription}>
-              Latinx Business Student Association at Santa Clara University
+              Santa Clara University Latinx Business Student Association
             </p>
             <p className={styles.footerDescription}>
-              Connect. Lead. Empower.
+              Your Familia in Business
             </p>
           </div>
 
@@ -31,10 +38,29 @@ const Footer = () => {
                 <Link to="/board">Board</Link>
               </li>
               <li>
-                <Link to="/sponsorship">Sponsors</Link>
+                <Link to="/membership">Join Us</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSubtitle}>Resources</h4>
+            <ul className={styles.footerLinks}>
+              <li>
+                <Link to="/resources">Resources</Link>
+              </li>
+              <li>
+                <Link to="/sponsorship">Sponsorship</Link>
+              </li>
+              <li>
+                <Link to="/alumni">Alumni</Link>
+              </li>
+              <li>
+                <Link to="/photobook/2024-2025">Photo Book</Link>
               </li>
             </ul>
           </div>
@@ -44,17 +70,7 @@ const Footer = () => {
             <h4 className={styles.footerSubtitle}>Connect</h4>
             <div className={styles.socialLinks}>
               <a
-                href="mailto:lbsa@scu.edu"
-                aria-label="Email us"
-                className={styles.socialLink}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/>
-                </svg>
-              </a>
-              
-              <a
-                href="https://instagram.com/scu.lbsa"
+                href="https://instagram.com/scu_lbsa"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
@@ -76,6 +92,16 @@ const Footer = () => {
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
+              
+              <a
+                href="mailto:lbsa@scu.edu"
+                aria-label="Email us"
+                className={styles.socialLink}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/>
+                </svg>
+              </a>
             </div>
             
             <div className={styles.contactInfo}>
@@ -89,7 +115,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className={styles.footerBottom}>
-          <p>&copy; {currentYear} Latinx Business Student Association | Santa Clara University</p>
+          <p>&copy; {currentYear} SCU Latinx Business Student Association. All rights reserved.</p>
           <div className={styles.footerBottomLinks}>
             <Link to="/privacy">Privacy Policy</Link>
             <span className={styles.separator}>•</span>

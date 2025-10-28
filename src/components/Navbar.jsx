@@ -54,7 +54,10 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/board', label: 'Board' },
-    { path: '/sponsorship', label: 'Sponsors' },
+    { path: '/sponsorship', label: 'Sponsorship' },
+    { path: '/alumni', label: 'Alumni' },
+    { path: '/membership', label: 'Membership' },
+    { path: '/resources', label: 'Resources' },
     { path: '/contact', label: 'Contact' }
   ]
 
@@ -64,7 +67,11 @@ const Navbar = () => {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoText}>LBSA</span>
+            <img 
+              src="/src/assets/img/Latinx Business Student Association Logo.png" 
+              alt="LBSA Logo" 
+              className={styles.logoImage}
+            />
           </Link>
 
           {/* Desktop Navigation */}
