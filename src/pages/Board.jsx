@@ -101,7 +101,7 @@ const Board = () => {
       {/* Hero Section */}
       <section className="bg-cardinal text-white py-20">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Executive Board</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Executive Board</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Meet the dedicated student leaders who drive our mission forward and 
             create opportunities for our community.

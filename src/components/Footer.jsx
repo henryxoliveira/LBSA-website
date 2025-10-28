@@ -11,6 +11,13 @@ const Footer = () => {
         <div className={styles.footerContent}>
           {/* Organization Info */}
           <div className={styles.footerSection}>
+            <div className="mb-4">
+              <img 
+                src="/src/assets/img/Latinx Business Student Association Logo.png" 
+                alt="LBSA Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
             <h3 className={styles.footerTitle}>SCU LBSA</h3>
             <p className={styles.footerDescription}>
               Santa Clara University Latinx Business Student Association

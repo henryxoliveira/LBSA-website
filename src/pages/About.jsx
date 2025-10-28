@@ -7,7 +7,14 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-cardinal text-white py-20">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About SCU LBSA</h1>
+          <div className="mb-8">
+            <img 
+              src="/src/assets/img/Latinx Business Student Association Logo.png" 
+              alt="LBSA Logo" 
+              className="h-20 w-auto mx-auto mb-6"
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About SCU LBSA</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Empowering Latinx business students at Santa Clara University through 
             leadership development, community engagement, and professional growth.

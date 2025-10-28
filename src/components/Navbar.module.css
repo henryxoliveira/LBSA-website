@@ -15,15 +15,17 @@
 }
 
 .logo {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--cardinal);
+  display: flex;
+  align-items: center;
   text-decoration: none;
   transition: var(--transition);
 }
 
-.logo:hover {
-  color: var(--charcoal);
+.logoImage {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
 }
 
 .logoText {

@@ -36,9 +36,10 @@
 }
 
 .pillarTitle {
+  font-family: var(--font-subheading);
   font-size: var(--font-size-xl);
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--cardinal);
   margin: 0 0 var(--space-4);
 }
 

@@ -86,7 +86,14 @@ const Home = () => {
         <div className="container">
           <div className="grid md:grid-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <div className="mb-8">
+                <img 
+                  src="/src/assets/img/Latinx Business Student Association Logo.png" 
+                  alt="LBSA Logo" 
+                  className="h-20 w-auto mx-auto mb-6"
+                />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Your Familia in Business at Santa Clara University
               </h1>
               <p className="text-xl mb-8 text-gray-200">

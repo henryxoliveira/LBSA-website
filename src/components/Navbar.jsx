@@ -67,7 +67,11 @@ const Navbar = () => {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoText}>SCU LBSA</span>
+            <img 
+              src="/src/assets/img/Latinx Business Student Association Logo.png" 
+              alt="LBSA Logo" 
+              className={styles.logoImage}
+            />
           </Link>
 
           {/* Desktop Navigation */}
