@@ -2,13 +2,16 @@ import React from 'react'
 import styles from './MemberCard.module.css'
 
 const MemberCard = ({ name, role, image, linkedin }) => {
+  const isJackyOrAdrian = name === 'Jacky Ceja' || name === 'Adrian Pina';
+  const isEmily = name === 'Emily Robles';
+  
   return (
     <div className={styles.memberCard}>
       <div className={styles.memberImage}>
         <img
           src={image}
           alt={`${name} - ${role}`}
-          className={styles.image}
+          className={`${styles.image} ${isJackyOrAdrian ? styles.imageAdjusted : ''} ${isEmily ? styles.imageEmily : ''}`}
           loading="lazy"
         />
       </div>

@@ -28,7 +28,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 30%;
   transition: var(--transition);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: high-quality;
+}
+
+.imageAdjusted {
+  object-position: center 10%;
+}
+
+.imageEmily {
+  object-position: center 5%;
 }
 
 .memberCard:hover .image {
