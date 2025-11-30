@@ -48,10 +48,15 @@
 }
 
 .footerDescription {
-  color: var(--gray-300);
+  color: #000000;
   margin: 0;
   line-height: 1.6;
   font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+.footerDescription:hover {
+  color: var(--burgundy);
 }
 
 .footerLinks {
@@ -64,7 +69,7 @@
 }
 
 .footerLinks a {
-  color: var(--gray-300);
+  color: #000000;
   text-decoration: none;
   transition: var(--transition);
   padding: var(--space-1) 0;
@@ -102,14 +107,19 @@
 }
 
 .contactInfo {
-  color: var(--gray-300);
+  color: #000000;
   font-size: var(--font-size-sm);
   line-height: 1.6;
   font-family: var(--font-body);
+  transition: var(--transition);
 }
 
 .contactInfo p {
   margin: 0 0 var(--space-1);
+}
+
+.contactInfo:hover {
+  color: var(--burgundy);
 }
 
 .footerBottom {
@@ -131,10 +141,15 @@
 }
 
 .footerBottom p {
-  color: var(--gray-400);
+  color: #000000;
   margin: 0;
   font-size: var(--font-size-sm);
   font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+.footerBottom p:hover {
+  color: var(--burgundy);
 }
 
 .footerBottomLinks {
@@ -144,7 +159,7 @@
 }
 
 .footerBottomLinks a {
-  color: var(--gray-400);
+  color: #000000;
   text-decoration: none;
   font-size: var(--font-size-sm);
   transition: var(--transition);

@@ -172,7 +172,7 @@ const PhotoBook = () => {
               Submit Photos
             </a>
             <a
-              href="https://instagram.com/scu_lbsa"
+              href="https://www.instagram.com/lbsa_scu/"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-cardinal text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-cardinal hover:text-white transition inline-block"

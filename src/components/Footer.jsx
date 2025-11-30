@@ -70,7 +70,7 @@ const Footer = () => {
             <h4 className={styles.footerSubtitle}>Connect</h4>
             <div className={styles.socialLinks}>
               <a
-                href="https://instagram.com/scu_lbsa"
+                href="https://www.instagram.com/lbsa_scu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
