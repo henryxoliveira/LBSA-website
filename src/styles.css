@@ -9,9 +9,9 @@ html {
 /* ===== CSS VARIABLES ===== */
 :root {
   /* Colors */
-  --cardinal: #8B1538;
+  --cardinal: #7A1C1C; /* Primary: deep SCU burgundy */
   --burgundy: #722F37;
-  --charcoal: #1F2937;
+  --charcoal: #000000; /* Secondary: black for text and structure */
   --gray-100: #F8F9FA;
   --gray-200: #E9ECEF;
   --gray-300: #DEE2E6;
@@ -21,8 +21,9 @@ html {
   --gray-700: #343A40;
   --gray-800: #212529;
   --gray-900: #111827;
-  --white: #FFFFFF;
-  --light-beige: #F5F5DC;
+  --white: #FFFFFF; /* Background: clean white base */
+  --beige: #D9C7B8; /* Accent: soft beige accent for sections or hover states */
+  --light-beige: #D9C7B8; /* Alias for backward compatibility */
   
   /* Typography */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -377,8 +378,12 @@ section {
   background-color: var(--burgundy);
 }
 
+.bg-beige {
+  background-color: var(--beige);
+}
+
 .bg-light-beige {
-  background-color: var(--light-beige);
+  background-color: var(--beige); /* Updated to use new accent color */
 }
 
 /* ===== TEXT COLOR UTILITIES ===== */
