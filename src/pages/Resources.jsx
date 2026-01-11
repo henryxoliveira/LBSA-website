@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Resources.module.css'
 
 const Resources = () => {
   const resourceCategories = [
@@ -9,26 +10,30 @@ const Resources = () => {
         {
           name: 'SCU Academic Calendar',
           description: 'Important dates and deadlines for the academic year',
-          url: 'https://www.scu.edu/academic-calendar/',
-          external: true
+          url: 'https://www.scu.edu/registrar/ugrd-academic-calendar/',
+          external: true,
+          image: '/src/assets/img/scu logo.png'
         },
         {
           name: 'Leavey School of Business',
           description: 'Official website with program information and resources',
           url: 'https://www.scu.edu/business/',
-          external: true
+          external: true,
+          image: '/src/assets/img/lsb logo.png'
         },
         {
           name: 'SCU Library',
           description: 'Access to research databases, study spaces, and research help',
           url: 'https://www.scu.edu/library/',
-          external: true
+          external: true,
+          image: '/src/assets/img/library.png'
         },
         {
           name: 'Academic Advising',
           description: 'Schedule appointments with your academic advisor',
-          url: 'https://www.scu.edu/advising/',
-          external: true
+          url: 'https://www.scu.edu/drahmann/',
+          external: true,
+          image: '/src/assets/img/academic advising.webp'
         }
       ]
     },
@@ -40,25 +45,29 @@ const Resources = () => {
           name: 'SCU Career Center',
           description: 'Career counseling, resume reviews, and job search assistance',
           url: 'https://www.scu.edu/career-center/',
-          external: true
+          external: true,
+          image: '/src/assets/img/career%20center.png'
         },
         {
           name: 'Handshake',
           description: 'SCU\'s job and internship platform',
           url: 'https://scu.joinhandshake.com/',
-          external: true
+          external: true,
+          image: '/src/assets/img/handshake.svg'
         },
         {
           name: 'LinkedIn Learning',
           description: 'Free access to professional development courses',
           url: 'https://www.linkedin.com/learning/',
-          external: true
+          external: true,
+          image: '/src/assets/img/LI.png'
         },
         {
           name: 'Resume Templates',
           description: 'Professional resume templates and examples',
-          url: '#',
-          external: false
+          url: 'https://docs.google.com/document/d/1ZYMYr_Q2x3j6wbMqeX0qJ79Xd8-If5f8Z41aNhe_tuY/edit?tab=t.0#heading=h.d9nxhggkkrtp',
+          external: true,
+          image: '/src/assets/img/jobscan.png'
         }
       ]
     },
@@ -152,32 +161,30 @@ const Resources = () => {
                 
                 <div className="grid grid-1 md:grid-2 gap-8">
                   {category.resources.map((resource, resourceIndex) => (
-                    <div key={resourceIndex} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                      <div className="p-6">
-                        <div className="flex items-start justify-between mb-4">
-                          <h3 className="text-xl font-semibold text-cardinal">{resource.name}</h3>
-                          {resource.external && (
-                            <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <polyline points="15,3 21,3 21,9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <line x1="10" y1="14" x2="21" y2="3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          )}
-                        </div>
-                        <p className="text-gray-600 mb-4">{resource.description}</p>
-                        <a
-                          href={resource.url}
-                          target={resource.external ? "_blank" : "_self"}
-                          rel={resource.external ? "noopener noreferrer" : ""}
-                          className="inline-flex items-center text-cardinal font-semibold hover:text-red-700 transition"
-                        >
-                          Visit Resource
-                          <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </a>
+                    <a
+                      key={resourceIndex}
+                      href={resource.url}
+                      target={resource.external ? "_blank" : "_self"}
+                      rel={resource.external ? "noopener noreferrer" : ""}
+                      className={styles.resourceCard}
+                    >
+                      <div className={styles.resourceCardContent}>
+                        {resource.image && (
+                          <div className={styles.resourceImageContainer}>
+                            <img 
+                              src={resource.image} 
+                              alt={`${resource.name} Logo`} 
+                              className={styles.resourceImage}
+                            />
+                          </div>
+                        )}
+                        <h3 className={styles.resourceTitle}>{resource.name}</h3>
+                        <p className={styles.resourceDescription}>{resource.description}</p>
                       </div>
-                    </div>
+                      <div className={styles.hoverOverlay}>
+                        <div className={styles.hoverText}>Visit Resource</div>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -203,11 +210,12 @@ const Resources = () => {
               rel="noopener noreferrer"
               className="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition"
             >
-              <div className="w-12 h-12 bg-cardinal rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <polyline points="9,22 9,12 15,12 15,22" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                <img 
+                  src="/src/assets/img/scu logo.png" 
+                  alt="SCU Logo" 
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h3 className="font-semibold mb-2">SCU Homepage</h3>
               <p className="text-sm text-gray-600">Official university website</p>

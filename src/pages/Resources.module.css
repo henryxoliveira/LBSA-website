@@ -1,0 +1,78 @@
+.resourceCard {
+  position: relative;
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.resourceCard:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.resourceCardContent {
+  padding: var(--space-6);
+  transition: opacity 0.3s ease;
+}
+
+.resourceCard:hover .resourceCardContent {
+  opacity: 0.3;
+}
+
+.hoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(122, 28, 28, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.resourceCard:hover .hoverOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hoverText {
+  color: white;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+.resourceImageContainer {
+  margin-bottom: var(--space-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 100%;
+}
+
+.resourceImage {
+  height: 160px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.resourceTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--cardinal);
+  margin-bottom: var(--space-4);
+}
+
+.resourceDescription {
+  color: var(--gray-600);
+  margin-bottom: var(--space-4);
+}
+

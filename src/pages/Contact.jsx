@@ -194,7 +194,7 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold mb-4" style={{fontFamily: 'var(--font-subheading)'}}>Follow Us</h3>
                   <div className="flex gap-4">
                     <a
-                      href="https://instagram.com/scu.lbsa"
+                      href="https://www.instagram.com/lbsa_scu/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-burgundy rounded-full flex items-center justify-center text-white hover:bg-black transition"

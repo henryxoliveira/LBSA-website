@@ -1,6 +1,6 @@
 /* Additional styles for About page if needed */
 .aboutHero {
-  background: linear-gradient(135deg, var(--cardinal) 0%, #8B0000 100%);
+  background: linear-gradient(135deg, var(--cardinal) 0%, #5A1414 100%);
 }
 
 .valuesGrid {
