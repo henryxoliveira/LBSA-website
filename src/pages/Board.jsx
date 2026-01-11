@@ -1,97 +1,112 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import MemberCard from '../components/MemberCard'
+import headshot1 from '../assets/img/headshot_1.jpg'
+import headshot2 from '../assets/img/headshot_2.jpg'
+import headshot3 from '../assets/img/headshot_3.jpg'
+import headshot4 from '../assets/img/headshot_4.jpg'
+import headshot5 from '../assets/img/headshot_5.jpg'
+import headshot6 from '../assets/img/headshot_6.jpg'
+import headshot7 from '../assets/img/headshot_7.jpg'
+import headshot8 from '../assets/img/headshot_8.jpg'
+import headshot9 from '../assets/img/headshot_9.jpg'
+import headshot10 from '../assets/img/headshot_10.jpg'
+import headshot11 from '../assets/img/headshot_11.jpg'
+import headshot12 from '../assets/img/headshot_12.jpg'
+import headshot13 from '../assets/img/headshot_13.jpg'
+import headshot14 from '../assets/img/headshot_14.jpg'
+import headshot15 from '../assets/img/headshot_15.jpg'
 
 const Board = () => {
   const boardMembers = [
     {
       name: 'Adrian Pina',
       role: 'Co-President',
-      image: '/src/assets/img/headshot_1.jpg',
+      image: headshot1,
       linkedin: 'https://www.linkedin.com/in/adrian-pina2022/'
     },
     {
       name: 'Jacky Ceja',
       role: 'Co-President',
-      image: '/src/assets/img/headshot_2.jpg',
+      image: headshot2,
       linkedin: 'https://www.linkedin.com/in/jacqueline-ceja/'
     },
     {
       name: 'Karla Hernandez',
       role: 'Director of Marketing',
-      image: '/src/assets/img/headshot_3.jpg',
+      image: headshot3,
       linkedin: 'https://www.linkedin.com/in/karla-martinez-karla-martinez/'
     },
     {
       name: 'Gavin Hall',
       role: 'Director of Member Relations',
-      image: '/src/assets/img/headshot_4.jpg',
+      image: headshot4,
       linkedin: 'https://www.linkedin.com/in/gavin-hall/'
     },
     {
       name: 'Jahir De Los Santos',
       role: 'Director of Internal Affairs',
-      image: '/src/assets/img/headshot_5.jpg',
+      image: headshot5,
       linkedin: 'https://www.linkedin.com/in/jahirdelossantos/'
     },
     {
       name: 'Juan Macias',
       role: 'Finance Coordinator',
-      image: '/src/assets/img/headshot_6.jpg',
+      image: headshot6,
       linkedin: 'https://www.linkedin.com/in/juan-mac%C3%ADas-02599b240/'
     },
     {
       name: 'Jeffrey Leon',
       role: 'Internal Relations',
-      image: '/src/assets/img/headshot_7.jpg',
+      image: headshot7,
       linkedin: 'https://www.linkedin.com/in/jeffrey-leon-249819219/'
     },
     {
       name: 'Jasmin Gonzalez-Ortiz',
       role: 'Creative Media Manager',
-      image: '/src/assets/img/headshot_8.jpg',
+      image: headshot8,
       linkedin: 'https://www.linkedin.com/in/jasmingonzalez-ortiz/'
     },
     {
       name: 'Daniel Barandica',
       role: 'Internal Relations',
-      image: '/src/assets/img/headshot_9.jpg',
+      image: headshot9,
       linkedin: 'https://www.linkedin.com/in/daniel-barandica-/'
     },
     {
       name: 'Emily Robles',
       role: 'Marketing Coordinator',
-      image: '/src/assets/img/headshot_10.jpg',
+      image: headshot10,
       linkedin: 'https://www.linkedin.com/in/emily-robles-9669602a9/'
     },
     {
       name: 'Jesus Cruz',
       role: 'Financial Advisor',
-      image: '/src/assets/img/headshot_11.jpg',
+      image: headshot11,
       linkedin: 'https://www.linkedin.com/in/jesus-cruz72/'
     },
     {
       name: 'Jasmine Arizpe',
       role: 'Marketing Coordinator',
-      image: '/src/assets/img/headshot_12.jpg',
+      image: headshot12,
       linkedin: 'https://www.linkedin.com/in/jasmine-arizpe-a24789342/'
     },
     {
       name: 'Camilo Ramirez',
       role: 'Director of AR & Alumni Engagement Coordinator',
-      image: '/src/assets/img/headshot_13.jpg',
+      image: headshot13,
       linkedin: 'https://www.linkedin.com/in/camilo-ramirez-/'
     },
     {
       name: 'Stephanie Andrade',
       role: 'Sponsorship Outreach',
-      image: '/src/assets/img/headshot_14.jpg',
+      image: headshot14,
       linkedin: 'https://www.linkedin.com/in/stephanie-andrade-chavez/'
     },
     {
       name: 'Henrique Olivera',
       role: 'VP of External Affairs',
-      image: '/src/assets/img/headshot_15.jpg',
+      image: headshot15,
       linkedin: 'https://www.linkedin.com/in/henrique-de-mello-oliveira/'
     }
   ]

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './About.module.css'
+import logo from '../assets/img/Latinx Business Student Association Logo.png'
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <div className="container text-center">
           <div className="mb-8">
             <img 
-              src="/src/assets/img/Latinx Business Student Association Logo.png" 
+              src={logo} 
               alt="LBSA Logo" 
               className="h-20 w-auto mx-auto mb-6"
             />

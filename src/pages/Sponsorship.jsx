@@ -1,15 +1,16 @@
 import React from 'react'
+import logoScu from '../assets/img/logo_scu.svg'
 
 const Sponsorship = () => {
   const sponsors = [
-    { name: 'PwC', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Deloitte', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Target', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Google', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Microsoft', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Amazon', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Salesforce', logo: '/src/assets/img/logo_scu.svg' },
-    { name: 'Netflix', logo: '/src/assets/img/logo_scu.svg' }
+    { name: 'PwC', logo: logoScu },
+    { name: 'Deloitte', logo: logoScu },
+    { name: 'Target', logo: logoScu },
+    { name: 'Google', logo: logoScu },
+    { name: 'Microsoft', logo: logoScu },
+    { name: 'Amazon', logo: logoScu },
+    { name: 'Salesforce', logo: logoScu },
+    { name: 'Netflix', logo: logoScu }
   ]
   const sponsorshipTiers = [
     {

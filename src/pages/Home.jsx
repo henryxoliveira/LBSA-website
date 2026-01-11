@@ -4,6 +4,10 @@ import StatCard from '../components/StatCard'
 import PillarCard from '../components/PillarCard'
 import LogoGrid from '../components/LogoGrid'
 import { setupCounters } from '../utils/counters'
+import logo from '../assets/img/Latinx Business Student Association Logo.png'
+import heroImage from '../assets/img/hero.jpg'
+import logoPlaceholder1 from '../assets/img/logo_placeholder_1.svg'
+import logoPlaceholder2 from '../assets/img/logo_placeholder_2.svg'
 
 const Home = () => {
   useEffect(() => {
@@ -65,18 +69,18 @@ const Home = () => {
   ]
 
   const logos = [
-    { src: '/src/assets/img/logo_placeholder_1.svg', alt: 'Company 1' },
-    { src: '/src/assets/img/logo_placeholder_2.svg', alt: 'Company 2' },
-    { src: '/src/assets/img/logo_placeholder_3.svg', alt: 'Company 3' },
-    { src: '/src/assets/img/logo_placeholder_4.svg', alt: 'Company 4' },
-    { src: '/src/assets/img/logo_placeholder_5.svg', alt: 'Company 5' },
-    { src: '/src/assets/img/logo_placeholder_6.svg', alt: 'Company 6' },
-    { src: '/src/assets/img/logo_placeholder_7.svg', alt: 'Company 7' },
-    { src: '/src/assets/img/logo_placeholder_8.svg', alt: 'Company 8' },
-    { src: '/src/assets/img/logo_placeholder_9.svg', alt: 'Company 9' },
-    { src: '/src/assets/img/logo_placeholder_10.svg', alt: 'Company 10' },
-    { src: '/src/assets/img/logo_placeholder_11.svg', alt: 'Company 11' },
-    { src: '/src/assets/img/logo_placeholder_12.svg', alt: 'Company 12' }
+    { src: logoPlaceholder1, alt: 'Company 1' },
+    { src: logoPlaceholder2, alt: 'Company 2' },
+    { src: logoPlaceholder1, alt: 'Company 3' },
+    { src: logoPlaceholder2, alt: 'Company 4' },
+    { src: logoPlaceholder1, alt: 'Company 5' },
+    { src: logoPlaceholder2, alt: 'Company 6' },
+    { src: logoPlaceholder1, alt: 'Company 7' },
+    { src: logoPlaceholder2, alt: 'Company 8' },
+    { src: logoPlaceholder1, alt: 'Company 9' },
+    { src: logoPlaceholder2, alt: 'Company 10' },
+    { src: logoPlaceholder1, alt: 'Company 11' },
+    { src: logoPlaceholder2, alt: 'Company 12' }
   ]
 
   return (
@@ -88,7 +92,7 @@ const Home = () => {
             <div>
               <div className="mb-8">
                 <img 
-                  src="/src/assets/img/Latinx Business Student Association Logo.png" 
+                  src={logo} 
                   alt="LBSA Logo" 
                   className="h-20 w-auto mx-auto mb-6"
                 />
@@ -117,7 +121,7 @@ const Home = () => {
             </div>
             <div className="text-center">
               <img
-                src="/src/assets/img/hero.jpg"
+                src={heroImage}
                 alt="SCU LBSA students at a networking event"
                 className="rounded-lg shadow-lg max-w-md mx-auto"
               />

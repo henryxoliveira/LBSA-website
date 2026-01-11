@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
+import logo from '../assets/img/Latinx Business Student Association Logo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -13,7 +14,7 @@ const Footer = () => {
           <div className={styles.footerSection}>
             <div className="mb-4">
               <img 
-                src="/src/assets/img/Latinx Business Student Association Logo.png" 
+                src={logo} 
                 alt="LBSA Logo" 
                 className="h-16 w-auto"
               />

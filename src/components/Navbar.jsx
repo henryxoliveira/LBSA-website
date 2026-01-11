@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
+import logo from '../assets/img/Latinx Business Student Association Logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -68,7 +69,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className={styles.logo}>
             <img 
-              src="/src/assets/img/Latinx Business Student Association Logo.png" 
+              src={logo} 
               alt="LBSA Logo" 
               className={styles.logoImage}
             />
