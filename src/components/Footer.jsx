@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={styles.footer} role="contentinfo">
       <div className="container">
         <div className={styles.footerContent}>
-          {/* Organization Info */}
+          {/* Organization Info Section */}
           <div className={styles.footerSection}>
             <div className="mb-4">
               <img 
@@ -22,9 +22,6 @@ const Footer = () => {
             <h3 className={styles.footerTitle}>SCU LBSA</h3>
             <p className={styles.footerDescription}>
               Santa Clara University Latinx Business Student Association
-            </p>
-            <p className={styles.footerDescription}>
-              Your Familia in Business
             </p>
           </div>
 

@@ -35,6 +35,8 @@ const Membership = React.lazy(() => import('./pages/Membership'))
 const Resources = React.lazy(() => import('./pages/Resources'))
 const PhotoBook = React.lazy(() => import('./pages/PhotoBook'))
 const Contact = React.lazy(() => import('./pages/Contact'))
+const Privacy = React.lazy(() => import('./pages/Privacy'))
+const Terms = React.lazy(() => import('./pages/Terms'))
 
 // Available years for PhotoBook
 export const photoBookYears = [
@@ -72,6 +74,8 @@ function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/photobook/:year" element={<PhotoBook />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </Suspense>
       </main>
