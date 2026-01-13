@@ -88,6 +88,7 @@ body {
   background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img,
@@ -160,19 +161,26 @@ h6 {
 /* ===== SKIP LINK ===== */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 6px;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   background: var(--cardinal);
   color: var(--white);
   padding: 8px;
   text-decoration: none;
   border-radius: var(--border-radius);
   z-index: 1000;
-  transition: var(--transition);
 }
 
 .skip-link:focus {
+  position: fixed;
   top: 6px;
+  left: 6px;
+  width: auto;
+  height: auto;
+  overflow: visible;
 }
 
 /* ===== FOCUS STYLES ===== */
