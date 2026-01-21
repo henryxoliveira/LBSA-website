@@ -49,9 +49,6 @@ const Footer = () => {
             <h4 className={styles.footerSubtitle}>Resources</h4>
             <ul className={styles.footerLinks}>
               <li>
-                <Link to="/sponsorship">Sponsorship</Link>
-              </li>
-              <li>
                 <Link to="/alumni">Alumni</Link>
               </li>
               <li>

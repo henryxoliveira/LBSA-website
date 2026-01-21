@@ -29,7 +29,8 @@ import Footer from './components/Footer'
 const Home = React.lazy(() => import('./pages/Home'))
 const About = React.lazy(() => import('./pages/About'))
 const Board = React.lazy(() => import('./pages/Board'))
-const Sponsorship = React.lazy(() => import('./pages/Sponsorship'))
+// Sponsorship page hidden for now - uncomment when ready
+// const Sponsorship = React.lazy(() => import('./pages/Sponsorship'))
 const Alumni = React.lazy(() => import('./pages/Alumni'))
 const Membership = React.lazy(() => import('./pages/Membership'))
 // Resources page hidden for now - uncomment when ready
@@ -69,7 +70,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/board" element={<Board />} />
-            <Route path="/sponsorship" element={<Sponsorship />} />
+            {/* <Route path="/sponsorship" element={<Sponsorship />} /> */}
             <Route path="/alumni" element={<Alumni />} />
             <Route path="/membership" element={<Membership />} />
             {/* <Route path="/resources" element={<Resources />} /> */}
