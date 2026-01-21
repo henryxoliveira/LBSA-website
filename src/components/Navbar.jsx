@@ -57,7 +57,6 @@ const Navbar = () => {
     { path: '/board', label: 'Board' },
     { path: '/sponsorship', label: 'Sponsorship' },
     { path: '/alumni', label: 'Alumni' },
-    { path: '/resources', label: 'Resources' },
     { path: '/contact', label: 'Contact' }
   ]
 

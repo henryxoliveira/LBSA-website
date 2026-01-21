@@ -32,7 +32,8 @@ const Board = React.lazy(() => import('./pages/Board'))
 const Sponsorship = React.lazy(() => import('./pages/Sponsorship'))
 const Alumni = React.lazy(() => import('./pages/Alumni'))
 const Membership = React.lazy(() => import('./pages/Membership'))
-const Resources = React.lazy(() => import('./pages/Resources'))
+// Resources page hidden for now - uncomment when ready
+// const Resources = React.lazy(() => import('./pages/Resources'))
 const PhotoBook = React.lazy(() => import('./pages/PhotoBook'))
 const Contact = React.lazy(() => import('./pages/Contact'))
 const Privacy = React.lazy(() => import('./pages/Privacy'))
@@ -71,7 +72,7 @@ function App() {
             <Route path="/sponsorship" element={<Sponsorship />} />
             <Route path="/alumni" element={<Alumni />} />
             <Route path="/membership" element={<Membership />} />
-            <Route path="/resources" element={<Resources />} />
+            {/* <Route path="/resources" element={<Resources />} /> */}
             <Route path="/photobook/:year" element={<PhotoBook />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
