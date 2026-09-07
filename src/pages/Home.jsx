@@ -1,21 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import StatCard from '../components/StatCard'
+import StatCard, { StatsGrid } from '../components/StatCard'
 import PillarCard from '../components/PillarCard'
 import LogoGrid from '../components/LogoGrid'
-import { setupCounters } from '../utils/counters'
-import logo from '../assets/img/Latinx Business Student Association Logo.png'
-import heroImage from '../assets/img/hero.jpg'
 import logoPlaceholder1 from '../assets/img/logo_placeholder_1.svg'
 import logoPlaceholder2 from '../assets/img/logo_placeholder_2.svg'
+import heroBackground from '../assets/img/UCB-LBSA.webp'
+import styles from './Home.module.css'
 
 const Home = () => {
-  useEffect(() => {
-    // Setup counter animations
-    const observer = setupCounters()
-    return () => observer?.disconnect()
-  }, [])
-
   const stats = [
     { number: '150+', label: 'Members', description: 'Active student members' },
     { number: '300+', label: 'Alumni', description: 'Graduated members' },
@@ -86,48 +79,15 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-cardinal text-white py-20">
-        <div className="container">
-          <div className="grid md:grid-2 gap-12 items-center">
-            <div>
-              <div className="mb-8">
-                <img 
-                  src={logo} 
-                  alt="LBSA Logo" 
-                  className="h-20 w-auto mx-auto mb-6"
-                />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Your Familia in Business at Santa Clara University
-              </h1>
-              <p className="text-xl mb-8 text-gray-200">
-                Empowering Latinx business students through professional development, 
-                community service, and academic excellence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/membership"
-                  className="bg-white text-cardinal px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block text-center"
-                >
-                  Join the Familia
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cardinal transition inline-block text-center"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-            <div className="text-center">
-              <img
-                src={heroImage}
-                alt="SCU LBSA students at a networking event"
-                className="rounded-lg shadow-lg max-w-md mx-auto"
-              />
-            </div>
-          </div>
-        </div>
+      <section className={styles.hero}>
+        <h1 className="sr-only">
+          Your Familia in Business at Santa Clara University
+        </h1>
+        <img
+          src={heroBackground}
+          alt="LBSA members gathered on campus"
+          className={styles.heroImage}
+        />
       </section>
 
       {/* Impact Stats Section */}
@@ -140,16 +100,16 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-3 md:grid-5 gap-6">
-            {stats.map((stat, index) => (
+          <StatsGrid>
+            {stats.map((stat) => (
               <StatCard
-                key={index}
+                key={stat.label}
                 number={stat.number}
                 label={stat.label}
                 description={stat.description}
               />
             ))}
-          </div>
+          </StatsGrid>
         </div>
       </section>
 

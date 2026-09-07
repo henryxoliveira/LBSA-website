@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import styles from './Navbar.module.css'
-import logo from './LBSA-navbar-logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const isHome = location.pathname === '/'
 
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false)
+    setIsScrolled(false)
     // Scroll to top when route changes
     window.scrollTo(0, 0)
     
@@ -29,6 +31,21 @@ const Navbar = () => {
     
     handleHashScroll()
   }, [location.pathname, location.hash])
+
+  useEffect(() => {
+    if (!isHome) {
+      setIsScrolled(false)
+      return
+    }
+
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight * 0.85)
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [isHome])
 
 
   // Handle escape key
@@ -60,16 +77,25 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className={styles.navbar} role="navigation" aria-label="Main navigation">
-      <div className="container">
+    <nav
+      className={`${styles.navbar} ${isHome && !isScrolled && !isMenuOpen ? styles.overlay : ''}`}
+      style={isHome ? {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        backgroundColor: (isScrolled || isMenuOpen) ? 'var(--white)' : 'transparent',
+        borderBottom: (isScrolled || isMenuOpen) ? '1px solid var(--gray-200)' : 'none',
+        boxShadow: (isScrolled || isMenuOpen) ? 'var(--shadow-sm)' : 'none',
+      } : undefined}
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div className={styles.navBarInner}>
         <div className={styles.navContent}>
-          {/* Logo */}
-          <Link to="/" className={styles.logo}>
-            <img 
-              src={logo} 
-              alt="LBSA Logo" 
-              className={styles.logoImage}
-            />
+          <Link to="/" className={styles.logo} aria-label="LBSA home">
+            LBSA
           </Link>
 
           {/* Desktop Navigation */}
@@ -87,6 +113,13 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <Link
+              to="/membership"
+              className={`${styles.joinButton} ${isActive('/membership') ? styles.active : ''}`}
+              aria-current={isActive('/membership') ? 'page' : undefined}
+            >
+              Join
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,6 +148,15 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/membership"
+                  className={`${styles.mobileNavLink} ${isActive('/membership') ? styles.active : ''}`}
+                  aria-current={isActive('/membership') ? 'page' : undefined}
+                >
+                  Join
+                </Link>
+              </li>
             </ul>
           </div>
         )}

@@ -1,11 +1,28 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.6vw, 1.5rem);
+  align-items: stretch;
+  width: 100%;
+}
+
 .statCard {
+  container-type: inline-size;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-width: 0;
   background-color: var(--white);
   border: 1px solid var(--gray-200);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-8);
+  border-radius: 0;
+  padding: clamp(0.3rem, 1cqi, 0.75rem);
   text-align: center;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .statCard:hover {
@@ -15,30 +32,32 @@
 
 .statNumber {
   font-family: var(--font-heading);
-  font-size: var(--font-size-4xl);
+  font-size: clamp(2.25rem, 52cqi, 6.5rem);
   font-weight: 700;
   color: var(--cardinal);
-  margin-bottom: var(--space-3);
-  line-height: 1;
-}
-
-@media (min-width: 768px) {
-  .statNumber {
-    font-size: var(--font-size-5xl);
-  }
+  margin-bottom: clamp(0.15rem, 1.5cqi, 0.4rem);
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
 }
 
 .statLabel {
   font-family: var(--font-subheading);
-  font-size: var(--font-size-lg);
+  font-size: clamp(0.58rem, 8cqi, 1.125rem);
   font-weight: 600;
   color: var(--cardinal);
-  margin: 0 0 var(--space-2);
+  margin: 0 0 clamp(0.1rem, 1.5cqi, 0.5rem);
+  line-height: 1.2;
 }
 
 .statDescription {
   color: var(--gray-600);
-  font-size: var(--font-size-sm);
+  font-size: clamp(0.5rem, 6.5cqi, 0.875rem);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.3;
+}
+
+@container (max-width: 120px) {
+  .statDescription {
+    display: none;
+  }
 }
